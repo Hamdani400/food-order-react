@@ -2,12 +2,12 @@ import classes from './Header.module.css'
 import foodImg from '../../assets/food.jpg'
 import HeaderCardButton from './HeaderCardButton'
 
-export default function Header () {
+export default function Header (props) {
   return (
     <>
       <header className={classes.header}>
         <h1>Food Order</h1>
-        <HeaderCardButton />
+        <HeaderCardButton onClick={props.onShowCart} />
       </header>
       <div>
         <img

@@ -1,7 +1,7 @@
 import Modal from '../UI/Modal'
 import classes from './Cart.module.css'
 
-export default function Cart () {
+export default function Cart (props) {
   const cartItems = (
     <ul className={classes['cart-items']}>
       {[
@@ -18,14 +18,16 @@ export default function Cart () {
   )
 
   return (
-    <Modal>
+    <Modal onClick={props.onCloseCart}>
       {cartItems}
-      <div>
+      <div className={classes.total}>
         <span>Total Amount</span>
         <span>30.99</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button-alt']}>Close</button>
+        <button className={classes['button-alt']} onClick={props.onCloseCart}>
+          Close
+        </button>
         <button className={classes.button}>Order</button>
       </div>
     </Modal>
