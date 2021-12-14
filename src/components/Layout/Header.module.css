@@ -6,6 +6,7 @@
   height: 3rem;
   width: 100%;
   padding: 1rem 5rem;
+  z-index: 15;
   background-color: rgb(255, 196, 118);
 }
 

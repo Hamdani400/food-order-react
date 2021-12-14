@@ -13,7 +13,7 @@ export default function MealItem (props) {
         <div className={classes.price}>{priceFormat}</div>
       </div>
       <div>
-        <MealItemForm />
+        <MealItemForm id={props.id} />
       </div>
     </li>
   )
