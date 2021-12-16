@@ -6,15 +6,15 @@ import CartContext from '../../../store/cart-context'
 export default function MealItem (props) {
   const cartCtx = useContext(CartContext)
 
-  const { name, description, price } = props
+  const { id, name, description, price } = props
   const priceFormat = `$${price.toFixed(2)}`
 
   const addToCartHandler = amount => {
     cartCtx.addItem({
-      id: props.id,
-      name: props.name,
-      amount,
-      price: props.price
+      id: id,
+      name: name,
+      amount: amount,
+      price: price
     })
   }
 
